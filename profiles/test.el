@@ -5,6 +5,8 @@
 
 (load "base")
 
+(ido-mode 1)
+
 ;(setq initial-buffer-choice "* jaw *")
 ;(setq initial-scratch-buffer nil)
 (setq initial-buffer-choice load-file-name)

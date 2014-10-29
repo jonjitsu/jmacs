@@ -1,0 +1,17 @@
+/bin
+Executables that can be executed from command line or dmenu/x hotkeys
+
+jmacs: a helper command that can load a profile
+
+
+/docs
+/lib
+Personal code organized into modules
+
+/packages
+Downloaded packages. Currently there's only ELPA setup.
+
+/profiles
+The actual profiles. The profiles should be kept small. Most code should be in packages or lib
+
+base.el: has basic functions / configurations to be used across profiles to bootstrap them
