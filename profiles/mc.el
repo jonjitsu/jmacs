@@ -5,7 +5,16 @@
 
 (load "base")
 
+(defun jaw-startup-layout() 
+  (interactive)
+  (dired "~")
+  (split-window-horizontally)
+  (next-multiframe-window)
+  (dired "/tmp"))
 
-(message "Test profile loaded!")
+(jaw-startup-layout)
+  
+
+(message "MC profile loaded!")
 
 

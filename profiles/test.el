@@ -9,7 +9,8 @@
 ;(setq initial-scratch-buffer nil)
 (setq initial-buffer-choice load-file-name)
 
+;(setq wg-prefix-key (kbd "C-c w"))
+;(require 'workgroups)
 
 (message "Test profile loaded!")
-
 
