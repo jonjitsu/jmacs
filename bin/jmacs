@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]
+then 
+     echo "$(basename $0) <profile> [args]"
+     exit 1
+fi
+
+DIR=$(dirname $(dirname $0))
+
+if [ -f "$1" ] 
+then 
+     profile="$1"
+else 
+     profile="$DIR/profiles/$1"
+
+     if [ ! -f "$profile" ]
+     then
+        profile="$profile.el"
+        if [ ! -f "$profile" ]
+        then
+                echo "$profile does not exist"
+                echo "nor $1"
+                exit 2
+        fi
+     fi
+fi
+
+shift
+exec emacs -q -l "$profile" $@ & disown
