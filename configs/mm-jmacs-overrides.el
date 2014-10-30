@@ -34,9 +34,12 @@
 (define-key jmacs-minor-mode-map (kbd "C-h C-k") 'describe-key)
 (define-key jmacs-minor-mode-map (kbd "C-h C-f") 'describe-function)
 (define-key jmacs-minor-mode-map (kbd "C-h C-v") 'describe-variable)
+(define-key jmacs-minor-mode-map (kbd "C-h C-m") 'describe-mode)
 
 (define-key jmacs-minor-mode-map (kbd "C-x C-b") 'switch-to-buffer)
-(define-key jmacs-minor-mode-map (kbd "RET") 'align-newline-and-indent)
+;;(define-key jmacs-minor-mode-map (kbd "RET") 'align-newline-and-indent)
+;;(define-key minibuffer-local-map (kbd "RET") 'newline)
+;;(define-key minibuffer-inactive-mode-map (kbd "RET") 'newline)
 
 
 
@@ -53,8 +56,10 @@
   (message "@TODO"))
 
 (define-key jmacs-minor-mode-map (kbd "C-j C-r") 'jmacs-reload-profile)
+(define-key jmacs-minor-mode-map (kbd "C-j C-m") 'jmacs-minor-mode)
 
 (jmacs-minor-mode 1)
+
 
 
 
