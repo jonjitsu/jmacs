@@ -1,0 +1,106 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Oct 30 00:52:45 2014
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("helm" "regist"))
+(setq regexp-search-ring nil)
+(setq register-alist (list (list 49 "Unprintable entity" (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk 780 (get-buffer "test.el")))) mk)) (list 97 "Unprintable entity" (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk 420 (get-buffer "test.el")))) mk))))
+(setq file-name-history '("/mnt/dynamic/home/jz/jaw/jmacs/library/base.el" "/mnt/dynamic/home/jz/jaw/jmacs/docs/architecture.txt" "/mnt/dynamic/home/jz/jaw/jmacs/README.md" "/mnt/dynamic/home/jz/jaw/jmacs/profiles/test.el" "/mnt/dynamic/home/jz/jaw/jmacs/library/loader.el" "/mnt/dynamic/home/jz/jaw/jmacs/profiles/mc.el" "/mnt/dynamic/home/jz/jaw/jmacs/library/clean-start.el" "/mnt/dynamic/home/jz/jaw/jmacs/profiles/test.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/mnt/dynamic/home/jz/jaw/jmacs/library/base.el"
+  "base.el"
+  'emacs-lisp-mode
+  '(helm-mode jmacs-minor-mode)
+  1501
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  "/mnt/dynamic/home/jz/jaw/jmacs/configs/mm-jmacs-overrides.el"
+  "mm-jmacs-overrides.el"
+  'emacs-lisp-mode
+  '(helm-mode jmacs-minor-mode)
+  1006
+  '(939 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  "/mnt/dynamic/home/jz/jaw/jmacs/profiles/test.el"
+  "test.el"
+  'emacs-lisp-mode
+  '(helm-mode jmacs-minor-mode)
+  94
+  '(420 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/24.3/lisp/gnus/gnus-util.el"
+  "gnus-util.el"
+  'emacs-lisp-mode
+  '(helm-mode jmacs-minor-mode)
+  18782
+  '(nil nil)
+  t
+  nil
+  '((show-trailing-whitespace . t) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/mnt/dynamic/home/jz/jaw/jmacs/library/loader.el"
+  "loader.el"
+  'emacs-lisp-mode
+  '(helm-mode jmacs-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  nil)
+
+(desktop-create-buffer 206
+  "/mnt/dynamic/home/jz/jaw/jmacs/library/clean-start.el"
+  "clean-start.el"
+  'emacs-lisp-mode
+  '(helm-mode jmacs-minor-mode)
+  678
+  '(155 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/mnt/dynamic/home/jz/jaw/jmacs/README.md"
+  "README.md"
+  'fundamental-mode
+  '(helm-mode jmacs-minor-mode)
+  10
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/mnt/dynamic/home/jz/jaw/jmacs/profiles/mc.el"
+  "mc.el"
+  'emacs-lisp-mode
+  '(helm-mode jmacs-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-emacs-unix)))
+

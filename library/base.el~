@@ -38,11 +38,13 @@
      ) packages))
 
 
+(defvar jmacs-config-dir
+  (jaw-join-paths jmacs-home-dir "configs"))
+(add-to-list 'load-path jmacs-config-dir)
+
 ;
 ; Base configuration to bootstrap the rest
 ;
-(defvar jmacs-home-dir 
-  (jaw-dirname jmacs-profile-dir))
 
 (load "clean-start")
 
@@ -64,6 +66,8 @@
 ;
 ; Key bindings
 ;
+;(load "mm-jmacs-overrides")
+
 (global-set-key 
  (kbd "C-c C-l") 
  (lambda () (interactive) (describe-variable 'load-path)))
