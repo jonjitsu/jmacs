@@ -25,7 +25,7 @@
 ;;
 ;; Test binds
 ;;
-(define-key jmacs-minor-mode-map (kbd "C-i") 'jmacs-test-func)
+;;(define-key jmacs-minor-mode-map (kbd "C-i") 'jmacs-test-func)
 ;(define-key jmacs-minor-mode-map (kbd "z") 'jmacs-test-func)
 
 ;;
@@ -34,22 +34,37 @@
 (define-key jmacs-minor-mode-map (kbd "C-h C-k") 'describe-key)
 (define-key jmacs-minor-mode-map (kbd "C-h C-f") 'describe-function)
 (define-key jmacs-minor-mode-map (kbd "C-h C-v") 'describe-variable)
+(define-key jmacs-minor-mode-map (kbd "C-h C-m") 'describe-mode)
 
 (define-key jmacs-minor-mode-map (kbd "C-x C-b") 'switch-to-buffer)
-(define-key jmacs-minor-mode-map (kbd "RET") 'align-newline-and-indent)
-
-
+;;(define-key jmacs-minor-mode-map (kbd "RET") 'align-newline-and-indent)
+;;(define-key minibuffer-local-map (kbd "RET") 'newline)
+;;(define-key minibuffer-inactive-mode-map (kbd "RET") 'newline)
 
 ;;
 ;; jmacs custom binds use C-j as prefix
 ;;
   
 (defun jmacs-reload-profile ()
+  (interactive)
   (load-file jmacs-profile-file))
 
-(define-key jmacs-minor-mode-map (kbd "C-j C-r") ')
+(defun jmacs-edit-profile ()
+  (interactive)
+  (message "@TODO"))
+
+(define-key jmacs-minor-mode-map (kbd "C-j C-r") 'jmacs-reload-profile)
+(define-key jmacs-minor-mode-map (kbd "C-j C-m") 'jmacs-minor-mode)
+(define-key jmacs-minor-mode-map (kbd "C-j C-o") 'other-window)
+(define-key jmacs-minor-mode-map (kbd "C-j C-t") 'split-window-vertically)
+(define-key jmacs-minor-mode-map (kbd "C-j C-l") 'split-window-horizontally)
+(define-key jmacs-minor-mode-map (kbd "C-x C-k") 'delete-window)
+
+
+(define-key jmacs-minor-mode-map (kbd "C-j C-d C-d") 'ert)
 
 (jmacs-minor-mode 1)
+
 
 
 

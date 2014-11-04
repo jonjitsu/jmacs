@@ -6,7 +6,7 @@ then
      exit 1
 fi
 
-DIR=$(dirname $(dirname $0))
+DIR=$(dirname $(dirname $(readlink -f $0)))
 
 if [ -f "$1" ] 
 then 
@@ -27,4 +27,27 @@ else
 fi
 
 shift
-exec emacs -q -l "$profile" $@ & disown
+
+profile_filename=$(basename $profile)
+profile_name=${profile_filename%.*}
+profile_dir=${profile%.*}
+if [ -f "$profile_dir" ] 
+then
+    echo "$profile_dir is a file and should be a directory"
+    exit 3
+fi
+[ ! -d "$profile_dir" ] && mkdir -p "$profile_dir"
+
+bootstrap_lisp='(progn 
+  (defvar jmacs-home-dir "'$DIR'")
+  (defvar jmacs-profile-dir "'$profile_dir'")  
+  (defvar jmacs-profile-file "'$profile'")
+)'
+#set_home_dir='(defvar jmacs-home-dir "'$DIR'")'
+#set_profile_dir='(defvar jmacs-profile-dir "'${profile%.*}'")'
+#set_profile_name='(defvar jmacs-profile-file "'$profile'")'
+#echo $bootstrap_lisp ; exit
+exec emacs --no-init-file --no-splash --eval "$bootstrap_lisp" --load="$DIR/profiles/bootstrap.el" --load="$profile" $@ & disown
+
+#exec emacs --daemon=server-name --funcall="" --eval ""
+

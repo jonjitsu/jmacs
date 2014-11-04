@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+jmacs=$(dirname $0)/jmacs
+
+$jmacs focus

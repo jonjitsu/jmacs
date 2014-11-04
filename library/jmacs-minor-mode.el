@@ -1,3 +1,5 @@
+(provide 'jmacs-minor-mode)
+
 ;;(defun jmacs-define-keys (minor-mode &rest pairs)
 ;;  (mapc
 ;;   (lambda (pair)
@@ -25,7 +27,7 @@
 ;;
 ;; Test binds
 ;;
-(define-key jmacs-minor-mode-map (kbd "C-i") 'jmacs-test-func)
+;;(define-key jmacs-minor-mode-map (kbd "C-i") 'jmacs-test-func)
 ;(define-key jmacs-minor-mode-map (kbd "z") 'jmacs-test-func)
 
 ;;
@@ -41,8 +43,6 @@
 ;;(define-key minibuffer-local-map (kbd "RET") 'newline)
 ;;(define-key minibuffer-inactive-mode-map (kbd "RET") 'newline)
 
-
-
 ;;
 ;; jmacs custom binds use C-j as prefix
 ;;
@@ -57,6 +57,13 @@
 
 (define-key jmacs-minor-mode-map (kbd "C-j C-r") 'jmacs-reload-profile)
 (define-key jmacs-minor-mode-map (kbd "C-j C-m") 'jmacs-minor-mode)
+(define-key jmacs-minor-mode-map (kbd "C-j C-o") 'other-window)
+(define-key jmacs-minor-mode-map (kbd "C-j C-t") 'split-window-vertically)
+(define-key jmacs-minor-mode-map (kbd "C-j C-l") 'split-window-horizontally)
+(define-key jmacs-minor-mode-map (kbd "C-x C-k") 'delete-window)
+
+
+(define-key jmacs-minor-mode-map (kbd "C-j C-d C-d") 'ert)
 
 (jmacs-minor-mode 1)
 

@@ -5,8 +5,9 @@ jmacs: a helper command that can load a profile
 
 
 /docs
-/lib
+/library
 Personal code organized into modules
+-base.el: has basic functions / configurations to be used across profiles to bootstrap them
 
 /packages
 Downloaded packages. Currently there's only ELPA setup.
@@ -14,4 +15,24 @@ Downloaded packages. Currently there's only ELPA setup.
 /profiles
 The actual profiles. The profiles should be kept small. Most code should be in packages or lib
 
-base.el: has basic functions / configurations to be used across profiles to bootstrap them
+-test:
+--TODO (profiles):
+-sql editor(heidisql + workbench)
+-todo system app
+-orgmode calendar
+-note taking app
+
+
+TODO (general):
+-make mini buffer file select better
+
+-I want a hotkey for finding anything (combine find-file and switch-buffer into a sort of find-anything)
+-I want the find-* functions to have a version that opens in a new window focusing on it.
+-I want a hotkey that allows me to type in a todo and it will get automatically added to a list, it can be a general thing per profile where each profile has it's own file to add to.
+-I want everything to have tab completion.
+-I want a system where I can highlight a region and hit a hotkey and the selection gets added to a specific file. Maybe ask for which file from a set list of known files (helm style fuzzy logic autocomplete)
+-I want to select a region and start typing overriding content.
+-I want to set up unit testing for elisp.
+-I want better quitting and returning to previous spot when dealing with 'popups' such as the help/backtrace buffers.
+-Rekey resize windows + movement.
+-Make emacs look decent.
