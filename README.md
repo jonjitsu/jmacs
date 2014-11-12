@@ -2,7 +2,7 @@
 1. Rethink the structure for emacs configurations. The idea of profiles which are just entry points into a particular config tree to be used by starting separate emacs instances with particular purposes.
 
 ## 1. File structure
-
+```
 profiles/
   contains the profile.el entry point.
   
@@ -14,7 +14,7 @@ libraries/
   
 bin/
   jmacs  # profile bootstrapper
-  
+```
   
 ```bash
 
