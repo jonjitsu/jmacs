@@ -3,10 +3,23 @@
 if [ -z "$1" ]
 then 
      echo "$(basename $0) <profile> [args]"
+     echo "$(basename $0) ls"
      exit 1
 fi
 
 DIR=$(dirname $(dirname $(readlink -f $0)))
+
+if [ "$1" == "ls" ]
+then
+	find "$DIR/profiles/" -maxdepth 1 -name \*.el
+	exit 0
+fi
+
+if [ "$1" == "cd" ] 
+then
+	cd "$DIR"
+	exit 0
+fi
 
 if [ -f "$1" ] 
 then 

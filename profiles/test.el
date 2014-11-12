@@ -1,7 +1,7 @@
 (global-set-key (kbd "C-c C-j C-b") 'eval-buffer)
 
-
-(load "base")
+(require 'jmacs-base)
+(require 'jmacs-workgroups)
 
 ;(ido-mode 1)
 (helm-mode 1)
