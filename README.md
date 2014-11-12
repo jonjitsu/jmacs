@@ -1,19 +1,23 @@
-* GOALS:
-1. Think about a new structure for emacs configurations. The idea of profiles and starting an instance with a specific goal in mind.
+## GOALS:
+1. Rethink the structure for emacs configurations. The idea of profiles which are just entry points into a particular config tree to be used by starting separate emacs instances with particular purposes.
 
+## 1. File structure
 
+profiles/
+  contains the profile.el entry point.
+  
+packages/
+  where the emacs package manager stores it's packages to be used in different profiles.
+  
+libraries/
+  Generic custom code.
+  
+bin/
+  jmacs  # profile bootstrapper
+  
+  
+```bash
 
+bin/jmacs ruby   # fires up an emacs with a ruby environment setup.
 
-** 1. Emacs configuration structure
-
-Ex:
-I could have a simple bash script that could even be binded to a hotkey in X or tmux that runs
-
-emacs -q -l /path/to/jmacs/profiles/<profile.el>
-
-so for notetaking I could have a separate profile:
-
-> cat notebook.sh
-#!/usr/bin/env bash
-
-emacs -q -l /home/jz/jmacs/profiles/notebook.el
+```
